@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check User</title>
+    <script type="text/javascript">
+        function validate_form() {
+	        valid = true;
+                if ( document.check_form.name.value == "" ) {
+                    alert ( "Поле 'Пользователь' пустое" );
+                    valid = false;
+                    }
+            return valid;
+            }
+    </script>
+</head>
+<body>
+<div id="check-form">
+    <form name="check_form" method="post" action="/answer" onsubmit="return validate_form();">
+        <h2>Проверка пользователя</h2>
+        <label>Пользователь:</label>
+        <input type="text" name="name" value="">
+        <input type="submit" value="Проверить">
+    </form>
+</div>
+</body>
+</html>
